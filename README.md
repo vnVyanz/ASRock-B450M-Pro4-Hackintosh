@@ -8,7 +8,7 @@ This is a repository for the required kext and files to get a fully working Hack
 *Note:* I'm currently using a R3 2200g, which as audio issues under macOS and the iGPU is not compatible, so DRM and audio patching is pointless right now. I will be getting a R5 1600 Zen+  Refresh and a MSI RX560 2GB in the coming month.
  - [ ] DRM patch
  - [ ] Audio Patching
- - [ ] Update Opencore to 0.5.8
+ - [x] ~~Update Opencore to 0.5.8~~ **Done**
  - [ ] I'm likely missing other things
 
 **Requirements:**
