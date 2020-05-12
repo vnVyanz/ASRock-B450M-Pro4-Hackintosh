@@ -13,8 +13,8 @@ This is a repository for the required kext and files to get a fully working Hack
 
 **Requirements:**
 - macOS Catalina 10.15.4
-- Opencore 0.5.7
-- iMacPro1,1 SMBIOS
+- Opencore 0.5.8
+- MacPro7,1 SMBIOS
 - macOS Catalina compatible graphics card
 - A fully working brain
 - ASRock B450M Pro4 motherboard (Pretty obvious)
@@ -24,10 +24,16 @@ This is a repository for the required kext and files to get a fully working Hack
  1. Download/clone the repo and unzip
  2. Replace your current OC folder with the one provided in this repo
  3. Open the config.plist with ProperTree and go to PlatformInfo > Generic
- 4. Use GenSMBIOS to create a iMacPro1,1 SMBIOS and paste it accordingly into the config.plist then save
+ 4. Use GenSMBIOS to create a MacPro7,1 SMBIOS and paste it accordingly into the config.plist then save
  5. Boot and install like a normal Mac. Then follow the Post-Install guide linked below
- 
- **Useful Links:**
+
+**Notes**
+Feel free to open an issues if a kext needs updatings, found patches etc.
+
+**For Debugging Purposes:** 
+Goto `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args` add `-v` to boot args and goto `Misc -> Debug` and set `AppleDebug` to `True`. This enables a verbose boot output when booting macOS. Undo once you're done solving any issues you may having.
+
+**Useful Links:**
 - [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS), used the gernarate a iMacPro1,1 SMBIOS.
 - [Opencore Desktop guide](https://dortania.github.io/OpenCore-Desktop-Guide/), guides you to create your hackintosh. 
 - [ProperTree](https://github.com/corpnewt/ProperTree), a simple python based tool to edit and create .plist files such as your Opencore's config.plist.
@@ -40,3 +46,4 @@ This is a repository for the required kext and files to get a fully working Hack
 - AMD APU's iGPU will not have graphics acceleration, this also affects all motherboards, since macOS does not have working drivers for it.
 - Nvidia graphics cards will not work on Catalina or Mojave. This affects anyone using those cards. You must use High Sierra instead. RTX/16xx series cards will not work with any version of macOS.   
 - No 32 Bit Support. This affects all AMD hacks. 
+- Sleep does not work. This affects most AMD hacks. It is a hit or miss to get working.
